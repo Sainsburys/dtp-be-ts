@@ -4,7 +4,7 @@
   "description": "Interview task for back-end (TypeScript, Serverless)",
   "main": "",
   "repository": "https://github.com/JSainsburyPLC/canopy-interview-backend.git",
-  "license": "",
+  "license": "Unlicenced",
   "private": true,
   "dependencies": {
     "aws-lambda": "1.0.7",
@@ -32,6 +32,7 @@
     "test": "jest --watchAll",
     "clean": "rm -rf ./dist ./node_modules yarn-*.log",
     "format": "prettier -w src",
-    "format:readme": "prettier -w README.md"
+    "format:readme": "prettier -w README.md",
+    "to-js": "tsc && rm -rf src && mv dist src && yarn format && rm tsconfig.json"
   }
 }
