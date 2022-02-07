@@ -1,31 +1,27 @@
 {
-  "name": "canopy-interview-backend",
+  "name": "node-interview-backend",
   "version": "1.0.0",
-  "description": "Interview task for back-end (TypeScript, Serverless)",
+  "description": "Interview task for backend (Node.JS, TypeScript, Serverless)",
   "main": "",
-  "repository": "https://github.com/JSainsburyPLC/canopy-interview-backend.git",
+  "repository": "https://github.com/JSainsburyPLC/dtp-be-ts.git",
   "license": "Unlicenced",
   "private": true,
   "dependencies": {
-    "aws-lambda": "1.0.7",
-    "aws-sdk": "2.1053.0",
-    "axios": "^0.24.0",
-    "serverless": "^2.70.0"
+    "axios": "^0.24.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7",
-    "@babel/preset-typescript": "^7.16.7",
     "@types/aws-lambda": "8.10.89",
     "@types/jest": "27.4.0",
     "@types/node": "^14.14.20",
-    "babel-jest": "^27.4.6",
-    "babel-loader": "^8.2.2",
+    "aws-lambda": "1.0.7",
+    "aws-sdk": "2.1053.0",
+    "esbuild": "^0.14.19",
     "jest": "^27",
+    "serverless": "^2.70.0",
+    "serverless-esbuild": "^1.24.1",
     "serverless-offline": "^8",
-    "serverless-webpack": "5.6.0",
-    "typescript": "^4.5.4",
-    "webpack": "^5.65.0"
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.4"
   },
   "scripts": {
     "start": "serverless offline --stage local",
