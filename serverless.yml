@@ -1,19 +1,15 @@
 service: canopy-interview-backend
 
 plugins:
-  - serverless-webpack
+  - serverless-esbuild
   - serverless-offline
 
 custom:
-  webpack:
-    webpackConfig: webpack.config.js
-    includeModules:
-      forceExclude:
-        - aws-sdk
-    packager: 'yarn'
-    excludeFiles: src/**/*.test.[t|j]s
   serverless-offline:
     noPrependStageInUrl: true
+  esbuild:
+    bundle: true
+    minify: false
 
 provider:
   name: aws
