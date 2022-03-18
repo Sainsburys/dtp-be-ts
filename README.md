@@ -17,29 +17,30 @@ observation!**
 
 ```
 Given a user searches for a movie ("the simpsons")
-Then a response is returned that contains the movie title, ID and overview
+Then a response is returned that contains the movie title, ID and overview for each match
 ```
 ```
 Given a user searches for a movie ("foobarbazbat")
 And that movie does not exist
-Then an empty response is returned
+Then an empty array is returned
 ```
 
 **Your goal is to extend the API with the following use cases:**
 
 ```
 Given a user searches for a TV show ("the office")
-Then a response is returned that contains the title, ID, overview. 
+Then a response is returned that contains the title, ID, overview for each match
 ```
 ```
 Given a user searches for a TV show ("foobarbazbat")
 And that TV show does not exist
-Then an empty response is returned
+Then an empty array is returned
 ```
 ```
 Given a user searches for either a movie or TV show ("the simpsons")
-Then a response is returned that contains the title, ID, overview and type ("movie" or "tv")
+Then a response is returned that contains the title, ID, overview and type ("movie" or "tv") for each match
 ```
+
 **Other improvements you may wish to consider:**
 
 - Add type definitions for TMDB API search results, our own response type, anywhere else you see fit
