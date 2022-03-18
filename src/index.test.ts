@@ -7,7 +7,8 @@ describe("handler", () => {
       const response = (await handler(
         {
           queryStringParameters: {
-            query: "the simpsons",
+            query: "fkldsjflk;sadfdlfjf;as",
+            type: "movie",
           },
         } as unknown as APIGatewayProxyEvent,
         undefined,
@@ -22,6 +23,7 @@ describe("handler", () => {
         {
           queryStringParameters: {
             query: "the simpsons",
+            type: "movie",
           },
         } as unknown as APIGatewayProxyEvent,
         undefined,
@@ -40,4 +42,21 @@ describe("handler", () => {
       expect(actual).toEqual(expected);
     });
   });
+
+  describe("when the user specifies an invalid type", () => {
+    it("should return a 404 error", async() => {
+      const response = (await handler(
+        {
+          queryStringParameters: {
+            query: "the simpsons",
+            type: "wrong",
+          },
+        } as unknown as APIGatewayProxyEvent,
+        undefined,
+        undefined
+      )) as APIGatewayProxyResult;
+
+      expect(response.statusCode).toEqual(404)
+    })
+  })
 });
