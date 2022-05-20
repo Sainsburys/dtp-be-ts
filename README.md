@@ -7,9 +7,11 @@ We're not looking for you to implement this in any particular way. The test is t
 the kind of considerations you make when writing code, how you communicate, etc. Treat the task like you would your
 everyday work. Don't stress about implementing every single thing: it's probably impossible to finish this whole task!
 
-**The most important piece of advice is to talk about what you're doing, why you're doing it, any caveats/trade-offs
+The most important piece of advice is to talk about what you're doing, why you're doing it, any caveats/trade-offs
 you're making, etc. Please ask questions if anything is unclear: this is a collaborative task, not a passive
-observation!**
+observation!
+
+**You don't need to write any code beforehand. During the interview we'll complete this task as a pairing exercise, and we'll have the codebase set up and ready to work on. For now, just have a read through the requirements and use cases so that you have an understanding of what we're trying to achieve.**
 
 ## Use cases
 
@@ -25,7 +27,7 @@ And that movie does not exist
 Then an empty array is returned
 ```
 
-**Your goal is to extend the API with the following use cases:**
+**Our goal is to extend the API with the following use cases:**
 
 ```
 Given a user searches for a TV show ("the office")
@@ -41,7 +43,7 @@ Given a user searches for either a movie or TV show ("the simpsons")
 Then a response is returned that contains the title, ID, overview and type ("movie" or "tv") for each match
 ```
 
-**Other improvements you may wish to consider:**
+**Other improvements we may wish to consider:**
 
 - Add type definitions for TMDB API search results, our own response type, anywhere else you see fit
 - Refactor the search request so the API key is not hardcoded
